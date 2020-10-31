@@ -1,0 +1,5 @@
+/__pycache__
+/.venv
+/.idea
+/dist
+/test_code.egg-info
