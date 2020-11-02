@@ -14,7 +14,8 @@ class Leaderboard:
 
     def __getStats(self):
         try:
-            req = requests.get(f"{API_BASE_URL}/api/v0/stats/leaderboard", [["mode", self.mode]])
+            req = requests.get(f"{API_BASE_URL}/api/v0/stats/leaderboard",
+                               [["mode", self.mode]])
             req.raise_for_status()
             response = req.json()
             return response["leaderboard"]
@@ -25,7 +26,8 @@ class Leaderboard:
         return records[:self.count]
 
     def __countryHandler(self, records):
-        filtered_records = [record for record in records if record['country'] == self.country]
+        filtered_records = [
+            record for record in records if record['country'] == self.country]
         return len(filtered_records)
 
     def __userIdHandler(self, records):
