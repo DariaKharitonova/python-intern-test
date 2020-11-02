@@ -12,7 +12,7 @@ class TestTypeCheck(unittest.TestCase):
         for mode in type_check.AVAILABLE_MODES:
             self.assertEqual(type_check.check_mode(mode), mode,
                              'check_mode should return one of AVAILABLE_MODES')
-        with self.assert_raises(ArgumentTypeError):
+        with self.assertRaises(ArgumentTypeError):
             type_check.check_mode('not_in_list')
 
     def test_check_positive(self):
@@ -21,14 +21,14 @@ class TestTypeCheck(unittest.TestCase):
         """
         test_cases_positive = ['4', '8', '15', '16', '23', '42']
         for case in test_cases_positive:
-            self.assert_equal(type_check.check_positive(case), int(case), [
+            self.assertEqual(type_check.check_positive(case), int(case), [
                 'check_positive should return int if number is positive'])
         test_cases_negative = ['-4', '-8', '-15', '-16', '-23', '-42']
         for case in test_cases_negative:
-            with self.assert_raises(ArgumentTypeError):
+            with self.assertRaises(ArgumentTypeError):
                 # check_positive should raise error if number is negative
                 type_check.check_positive(case)
 
-        with self.assert_raises(ArgumentTypeError):
+        with self.assertRaises(ArgumentTypeError):
             # check_positive should raise error if number is 0
             type_check.check_positive('0')

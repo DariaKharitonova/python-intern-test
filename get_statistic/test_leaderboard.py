@@ -58,5 +58,5 @@ class TestLeaderboard(unittest.TestCase):
           Leaderboard.getRecords should print a message and exit program if user_id is not in a list of records  # noqa: E501
         """
         leaderboard = Leaderboard('r_wo', None, None, 'not exist')
-        with self.assert_raises(SystemExit):
+        with self.assertRaises(SystemExit):
             leaderboard.get_records()
