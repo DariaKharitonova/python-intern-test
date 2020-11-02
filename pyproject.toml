@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "test-code"
 version = "0.1.0"
-description = ""
+description = "test task for python developer intern position"
 authors = ["Daria <kharitonovadari@gmail.com>"]
 packages = [
     { include = "get_statistic" },
