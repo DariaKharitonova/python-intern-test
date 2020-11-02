@@ -1,6 +1,6 @@
-import type_check
+from get_statistic import type_check
 import argparse
-from leaderboard import Leaderboard
+from get_statistic.leaderboard import Leaderboard
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--mode', type=type_check.check_mode, required=True)

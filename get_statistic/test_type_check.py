@@ -1,5 +1,5 @@
 import unittest
-import type_check
+from get_statistic import type_check
 from argparse import ArgumentTypeError
 
 
