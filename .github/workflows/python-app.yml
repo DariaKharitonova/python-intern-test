@@ -24,6 +24,8 @@ jobs:
       run: pip install poetry
     - name: install dependency
       run: make install
+    - name: lint
+      run: make lint
     - name: Test with unittest
       run: |
         make test
