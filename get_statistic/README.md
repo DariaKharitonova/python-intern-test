@@ -3,7 +3,7 @@
 ___
 ###Application for collecting player statistics
 
-ou can install the package simply by running the command in your terminal:
+You can install the package simply by running the command in your terminal:
 
 ```bash
 pip install -i https://test.pypi.org/simple/ test-code --extra-index-url https://pypi.org/simple
