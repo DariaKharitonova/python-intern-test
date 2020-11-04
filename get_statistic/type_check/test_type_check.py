@@ -1,19 +1,9 @@
 import unittest
-from get_statistic import type_check
+from get_statistic.type_check import type_check
 from argparse import ArgumentTypeError
 
 
 class TestTypeCheck(unittest.TestCase):
-
-    def test_check_mode(self):
-        """
-        check_mode should return only values that defined in AVAILABLE_MODES
-        """
-        for mode in type_check.AVAILABLE_MODES:
-            self.assertEqual(type_check.check_mode(mode), mode,
-                             'check_mode should return one of AVAILABLE_MODES')
-        with self.assertRaises(ArgumentTypeError):
-            type_check.check_mode('not_in_list')
 
     def test_check_positive(self):
         """

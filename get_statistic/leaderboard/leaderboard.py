@@ -5,6 +5,15 @@ import json
 API_BASE_URL = "https://www.diabotical.com/"
 
 
+AVAILABLE_MODES = [
+    "r_macguffin",
+    "r_wo", "r_rocket_arena_2",
+    "r_shaft_arena_1",
+    "r_ca_2",
+    "r_ca_1"
+]
+
+
 class Leaderboard:
     def __init__(self, mode, count, country, user_id):
         self.mode = mode
@@ -19,7 +28,7 @@ class Leaderboard:
             req.raise_for_status()
             response = req.json()
             return response["leaderboard"]
-        except requests.exceptions.RequestException:
+        except (requests.exceptions.RequestException, KeyError):
             print('Service not available right now. Please try later.')
 
     def __handle_count(self, records):
@@ -34,8 +43,6 @@ class Leaderboard:
         for record in records:
             if record['user_id'] == self.user_id:
                 return record
-        print(f'User with id {self.user_id} not found')
-        sys.exit()
 
     def get_records(self):
         records = self.__get_stats()
@@ -45,4 +52,6 @@ class Leaderboard:
             return self.__handle_country(records)
         if self.user_id is not None:
             records = self.__handle_user_id(records)
+            if records is None:
+                return f'User with id {self.user_id} not found'
         return json.dumps(records, indent=2)

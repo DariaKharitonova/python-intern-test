@@ -1,6 +1,6 @@
 import unittest
 import json
-from get_statistic.leaderboard import Leaderboard
+from get_statistic.leaderboard.leaderboard import Leaderboard
 
 
 class TestLeaderboard(unittest.TestCase):
