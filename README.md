@@ -2,7 +2,7 @@
 [![Github Actions Status](https://github.com/DariaKharitonova/python-intern-test/blob/master/.github/workflows/Py%20CI/badge.svg)](https://github.com/DariaKharitonova/python-intern-test/actions)
 ___
 
-###Application for collecting player statistics
+Application for collecting player statistics
 
 ou can install the package simply by running the command in your terminal:
 
