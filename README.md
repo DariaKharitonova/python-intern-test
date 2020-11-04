@@ -1,20 +1,15 @@
-[![Maintainability](https://api.codeclimate.com/v1/badges/f3f7e8cd736b576c3aa1/maintainability)](https://codeclimate.com/github/DariaKharitonova/python-intern-test/maintainability)
-[![Github Actions Status](https://github.com/DariaKharitonova/python-intern-test/workflows/Python%20CI/badge.svg)](https://github.com/DariaKharitonova/python-intern-test/actions)
+[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+[![Github Actions Status](https://github.com/DariaKharitonova/python-intern-test/blob/master/.github/workflows/Py%20CI/badge.svg)](https://github.com/DariaKharitonova/python-intern-test/actions)
 ___
 ###Application for collecting player statistics
 
-You can install the package simply by running the command in your terminal:
+ou can install the package simply by running the command in your terminal:
 
 ```bash
-pip3 install git+https://github.com/DariaKharitonova/python-intern-test
+pip install -i https://test.pypi.org/simple/ test-code --extra-index-url https://pypi.org/simple
 ```
 
 To run the application, enter:
 ```bash
-python3 ./get_statistic/main.py --mode=<mode> --count=<count> --country=<coutnry> --user_id=<user_id>
-```
-
-Test:
-```bash
-make test
+python3 ./main.py --mode=r_wo
 ```
