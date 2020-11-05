@@ -54,3 +54,4 @@ class Leaderboard:
             if records is None:
                 return f'User with id {self.user_id} not found'
         return json.dumps(records, indent=2)
+
