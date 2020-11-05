@@ -52,4 +52,3 @@ class TestLeaderboard(unittest.TestCase):
                          'should return props of user profile')
         self.assertEqual(result_list['user_id'], user_id,
                          'should be the same user_id')
-
