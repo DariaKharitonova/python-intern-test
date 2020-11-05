@@ -10,8 +10,11 @@ You can install the package simply by running the command in your terminal:
 pip3 install git+https://github.com/DariaKharitonova/python-intern-test
 ```
 
-
 To run the application, enter:
 ```bash
 python3 ./main.py --mode=r_wo
+```
+To the run test, enter:
+ ```bash
+make test
 ```
