@@ -52,3 +52,11 @@ class TestLeaderboard(unittest.TestCase):
                          'should return props of user profile')
         self.assertEqual(result_list['user_id'], user_id,
                          'should be the same user_id')
+
+    def test_wrong_user_id_get_records(self):
+        """
+          Leaderboard.getRecords should print a message and exit program if user_id is not in a list of records  # noqa: E501
+        """
+        leaderboard = Leaderboard('r_wo', None, None, 'not exist')
+        with self.assertRaises(UserWarning):
+            leaderboard.get_records()
