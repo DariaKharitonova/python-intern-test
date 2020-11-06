@@ -55,8 +55,10 @@ class TestLeaderboard(unittest.TestCase):
 
     def test_wrong_user_id_get_records(self):
         """
-          Leaderboard.getRecords should print a message and exit program if user_id is not in a list of records  # noqa: E501
+            Leaderboard.getRecords should return a message that user not found  # noqa: E501
         """
-        leaderboard = Leaderboard('r_wo', None, None, 'not exist')
-        with self.assertRaises(UserWarning):
-            leaderboard.get_records()
+        user_id = 'some_user_id'
+        expect = f'User with id {user_id} not found'
+        leaderboard = Leaderboard('r_wo', None, None, user_id)
+        result = leaderboard.get_records()
+        self.assertEqual(result, expect, 'should return a message')
